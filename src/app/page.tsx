@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, Heart, Star, Instagram, Facebook } from 'lucide-react';
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -35,10 +36,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative">
+          {/*<div className="relative">
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
               <div className="bg-gradient-to-br from-brand-almond to-brand-cream h-[500px] w-full flex items-center justify-center">
-                {/* Decorative placeholder until we generate images */}
+                
                 <div className="text-center space-y-4">
                   <Heart className="mx-auto text-brand-accent animate-bounce" size={48} />
                   <p className="font-serif text-brand-dark/60 italic text-xl">Pastelería con Amor</p>
@@ -54,7 +55,16 @@ export default function Home() {
                 <p className="text-xs text-brand-dark/60">Rating de clientes</p>
               </div>
             </div>
+          </div>*/}
+          <div className="h-[500px] w-full relative rounded-[1rem] overflow-hidden">
+            <Image
+              src="/BannerPrincipal/almendra-mia1.jpg"
+              alt="Pastelería con Amor"
+              fill
+              className="object-cover"
+            />
           </div>
+
         </div>
       </section>
 
@@ -71,14 +81,29 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Brownie Keto', price: '$45', tag: 'Sin Gluten', color: 'bg-[#5D4037]' },
-              { title: 'Panqué de Plátano', price: '$180', tag: 'Vegano', color: 'bg-[#FBC02D]' },
-              { title: 'Cheesecake de Frutos', price: '$350', tag: 'Keto Friendly', color: 'bg-[#FF8A80]' },
+              { image: '/BannerPrincipal/almendra-mia1.jpg', title: 'Brownie Keto', price: '$45', tag: 'Sin Gluten', color: 'bg-[#5D4037]' },
+              { image: '/BannerPrincipal/almendra-mia1.jpg', title: 'Panqué de Plátano', price: '$180', tag: 'Vegano', color: 'bg-[#FBC02D]' },
+              { image: '/BannerPrincipal/almendra-mia1.jpg', title: 'Cheesecake de Frutos', price: '$350', tag: 'Keto Friendly', color: 'bg-[#FF8A80]' },
             ].map((product, idx) => (
               <div key={idx} className="bg-white rounded-[2rem] p-6 shadow-sm hover:shadow-xl transition-all group overflow-hidden border border-brand-almond/20">
-                <div className={`${product.color} h-64 rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105`}>
-                  <span className="text-white font-serif text-2xl font-bold opacity-30">{product.title}</span>
+                {/* Contenedor de la imagen (mantiene el alto y la animación) */}
+                <div className="h-64 rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+                  
+                  {/* Imagen de fondo utilizando Next.js Image */}
+                  <Image
+                    src={product.image}       // Ruta de la imagen (ej. /images/brownie.jpg o URL externa)
+                    alt={product.title}       // Texto alternativo para accesibilidad
+                    fill                      // Hace que la imagen llene el contenedor relativo
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Optimiza la carga
+                    className="object-cover"  // Equivalente a background-size: cover
+                    priority={idx < 3}        // Opcional: optimiza la carga de las primeras 3 imágenes (LCP)
+                  />
+
+                  {/* Filtro oscuro opcional para que el texto blanco se lea mejor si la imagen es muy clara */}
+                  <div className="absolute inset-0 bg-black/20" />
+                  
                 </div>
+
                 <div className="space-y-2">
                   <span className="text-brand-sage text-xs font-bold uppercase tracking-widest">{product.tag}</span>
                   <div className="flex justify-between items-center">
