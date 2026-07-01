@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: 'Inicio', href: '#home' },
     { name: 'Menú', href: '#products' },
     { name: 'Nosotros', href: '#about' },
+    { name: 'Testimonios', href: '#testimonials' },
     { name: 'Contacto', href: '#contact' },
   ];
 
