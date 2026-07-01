@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Almendra Mia",
-  description: "Reposteria saludable Cuernavaca",
+  title: "Almendra Mía | Postres Saludables en Cuernavaca",
+  description: "Disfruta brownies, cheesecakes, donas, panqués y pingüinos saludables en Cuernavaca. Elaborados con harina de almendra y sin azúcar refinada",
 };
 
 export default function RootLayout({
