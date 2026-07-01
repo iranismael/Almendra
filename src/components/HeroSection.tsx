@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-28 pb-12 md:pt-24 overflow-hidden scroll-mt-24"
     >
       {/* Decorative blobs */}
       <div className="absolute inset-0 z-0">
@@ -15,17 +15,17 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* Copy */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           <div className="inline-flex items-center gap-2 bg-brand-sage/10 text-brand-sage px-4 py-1.5 rounded-full text-sm font-semibold">
             <Leaf size={16} /> Repostería Saludable en Cuernavaca
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-serif font-bold leading-tight text-brand-dark">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold leading-tight text-brand-dark">
             Dulzura que{' '}
             <span className="text-brand-sage italic">cuida</span> de ti.
           </h1>
 
-          <p className="text-xl text-brand-dark/70 max-w-lg leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-dark/70 max-w-lg leading-relaxed">
             Preparamos pasteles saludables, sin azúcares refinados, elaborados
             con harina de almendra e ingredientes naturales cuidadosamente
             seleccionados.
@@ -48,9 +48,9 @@ export default function HeroSection() {
         </div>
 
         {/* Hero image */}
-        <div className="h-[500px] w-full relative rounded-[1rem] overflow-hidden">
+        <div className="h-[300px] md:h-[500px] w-full relative rounded-[1rem] overflow-hidden">
           <Image
-            src="/BannerPrincipal/almendra-mia1.jpg"
+            src="/BannerPrincipal/almendra-mia-portada.png"
             alt="Pastelería Almendra — postres saludables"
             fill
             className="object-cover"

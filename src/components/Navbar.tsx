@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,10 +33,14 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <div className="w-10 h-10 bg-brand-sage rounded-full flex items-center justify-center text-white">
-            <span className="font-serif text-xl font-bold">A</span>
-          </div>
-          <span className="text-2xl font-serif font-bold tracking-tight text-brand-dark">Almendra</span>
+          <Image
+            src="/logo-almendra.png"
+            alt="Almendra"
+            width={500}
+            height={268}
+            priority
+            className="h-11 w-auto"
+          />
         </motion.div>
 
         {/* Desktop Nav */}

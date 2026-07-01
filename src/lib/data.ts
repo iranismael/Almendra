@@ -4,26 +4,26 @@ export const products: Product[] = [
   {
     id: 1,
     title: 'Brownie Keto',
-    price: '$45',
+    price: '$345',
     tag: 'Sin Gluten',
     color: 'bg-[#5D4037]',
-    image: '/BannerPrincipal/almendra-mia1.jpg',
+    image: '/BannerPrincipal/almendra-mia-browni.png',
   },
   {
     id: 2,
     title: 'Panqué de Plátano',
-    price: '$180',
+    price: '$580',
     tag: 'Vegano',
     color: 'bg-[#FBC02D]',
-    image: '/BannerPrincipal/almendra-mia1.jpg',
+    image: '/BannerPrincipal/almendra-mia-panque.png',
   },
   {
     id: 3,
-    title: 'Cheesecake de Frutos',
+    title: 'Donas saludables',
     price: '$350',
     tag: 'Keto Friendly',
     color: 'bg-[#FF8A80]',
-    image: '/BannerPrincipal/almendra-mia1.jpg',
+    image: '/BannerPrincipal/almendra-mia-donas.png',
   },
 ];
 

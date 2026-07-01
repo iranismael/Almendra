@@ -21,7 +21,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative aspect-square rounded-[3rem] overflow-hidden">
               <Image
-                src="/BannerPrincipal/almendra-mia1.jpg"
+                src="/BannerPrincipal/almendra-mia-esencia.png"
                 alt="Ingredientes naturales Almendra"
                 fill
                 className="object-cover"
