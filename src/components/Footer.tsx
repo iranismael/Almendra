@@ -71,8 +71,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-brand-cream/10 text-center text-sm text-brand-cream/40">
-          © {new Date().getFullYear()} Almendra Healthy Desserts. Todos los
-          derechos reservados.
+          © {new Date().getFullYear()} Almendra Mía. Todos los
+          derechos reservados.<br /> Desarrolllador por <a href="https://www.ismaelfloresdev.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-sage transition-colors">Ismael Flores</a>
         </div>
       </div>
     </footer>

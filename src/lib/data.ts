@@ -61,7 +61,7 @@ export const features: FeatureItem[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-  email: 'hola@almendra.com',
+  email: 'almendramia.mx@gmail.com ',
   phone: '+52 (555) 123-4567',
   city: 'Cuernavaca Morelos',
 };
