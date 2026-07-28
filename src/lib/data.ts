@@ -51,10 +51,10 @@ export const features: FeatureItem[] = [
 export const contactInfo: ContactInfo = {
   email: 'hola@almendra.com',
   phone: '+52 (555) 123-4567',
-  city: 'Ciudad de México, MEX',
+  city: 'Cuernavaca Morelos',
 };
 
 export const socialLinks: SocialLink[] = [
-  { platform: 'instagram', href: '#' },
-  { platform: 'facebook',  href: '#' },
+  { platform: 'instagram', href: 'https://www.instagram.com/almendramia.mx' },
+  { platform: 'facebook',  href: 'https://www.facebook.com/profile.php?id=61574153920276' },
 ];

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Instagram, Facebook } from 'lucide-react';
 import { navLinks, contactInfo, socialLinks } from '@/lib/data';
 
@@ -14,17 +15,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-brand-sage rounded-full flex items-center justify-center text-white">
-                <span className="font-serif text-xl font-bold">A</span>
-              </div>
               <span className="text-2xl font-serif font-bold tracking-tight">
-                Almendra
+                Almendra mía
               </span>
             </div>
 
             <p className="text-brand-cream/60 max-w-sm">
               Repostería saludable para un estilo de vida consciente. Hacemos
-              envíos a toda la ciudad.
+              envíos a toda la ciudad de Cuernavaca.
             </p>
 
             {/* Social links */}
@@ -36,6 +34,7 @@ export default function Footer() {
                     key={platform}
                     href={href}
                     aria-label={platform}
+                    target="_blank" rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full border border-brand-cream/20 flex items-center justify-center hover:bg-brand-sage hover:border-brand-sage transition-all"
                   >
                     <Icon size={20} />

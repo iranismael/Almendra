@@ -17,9 +17,9 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Desde que implementamos esta solución, nuestro equipo ahorra más de 10 horas semanales en tareas repetitivas. La integración fue sorprendentemente sencilla y el soporte es excelente.",
+      "Pensé que un postre saludable no podía saber tan bien, pero me sorprendió. Son deliciosos, ligeros y ahora forman parte de mis antojos sin culpa",
     name: "Ana Martínez",
-    role: "Directora de Operaciones · Fintech MX",
+    role: "Cliente Plaza",
     initials: "AM",
     avatarColor: "bg-violet-100",
     textColor: "text-violet-800",
@@ -27,9 +27,9 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     quote:
-      "Probamos varias alternativas antes de decidir, y ninguna se acercó a la calidad de este producto. El onboarding fue rápido y en dos semanas ya teníamos resultados medibles.",
+      "Estoy cuidando mi alimentación y encontrar estos postres fue un gran descubrimiento. Tienen un sabor increíble y la calidad de los ingredientes se nota desde el primer bocado",
     name: "Carlos Ramírez",
-    role: "CEO · Startup Guadalajara",
+    role: "Cliente Plaza",
     initials: "CR",
     avatarColor: "bg-emerald-100",
     textColor: "text-emerald-800",
@@ -37,20 +37,20 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     quote:
-      "El panel de análisis nos dio visibilidad que antes no teníamos. Ahora tomamos decisiones con datos reales y podemos identificar cuellos de botella antes de que se vuelvan problemas.",
-    name: "Sofía Vargas",
-    role: "Head of Product · Agencia Digital",
-    initials: "SV",
+      "Los pedí para una reunión familiar y nadie creyó que eran saludables. Todos quedaron encantados con el sabor. Definitivamente volveré a comprar",
+    name: "María López",
+    role: "Cliente Plaza",
+    initials: "ML",
     avatarColor: "bg-orange-100",
     textColor: "text-orange-800",
   },
   {
     id: 4,
     quote:
-      "Lo que más valoro es la atención al cliente. Cada vez que tuvimos una duda, la respuesta llegó en minutos. No es común encontrar ese nivel de compromiso después de cerrar la venta.",
-    name: "Luis Hernández",
-    role: "Fundador · E-commerce CDMX",
-    initials: "LH",
+      "Me encanta tener una opción dulce que se adapte a mi estilo de vida. El servicio fue excelente, la entrega puntual y los postres llegaron frescos y deliciosos",
+    name: "Javier Hernández",
+    role: "Cliente Plaza",
+    initials: "JV",
     avatarColor: "bg-blue-100",
     textColor: "text-blue-800",
   },
@@ -75,7 +75,7 @@ export default function TestimonialsSlider() {
   const next = useCallback(() => go(current + 1), [current, go]);
 
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 9000);
     return () => clearInterval(timer);
   }, [next]);
 
@@ -120,9 +120,6 @@ export default function TestimonialsSlider() {
                   <div>
                     <p className="text-sm font-medium text-gray-900 dark:text-white">
                       {t.name}
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {t.role}
                     </p>
                   </div>
                 </div>
