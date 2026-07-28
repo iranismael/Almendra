@@ -8,6 +8,10 @@ export const products: Product[] = [
     tag: 'Sin Gluten',
     color: 'bg-[#5D4037]',
     image: '/BannerPrincipal/almendra-mia-browni.png',
+    description: 'Un brownie denso y húmedo, endulzado naturalmente y libre de gluten. Perfecto para un antojo sin culpa.',
+    calories: 210,
+    ingredients: ['Harina de almendra', 'Cacao', 'Huevo', 'Eritritol', 'Nuez'],
+    allergens: ['Huevo', 'Frutos secos'],
   },
   {
     id: 2,
@@ -16,6 +20,10 @@ export const products: Product[] = [
     tag: 'Vegano',
     color: 'bg-[#FBC02D]',
     image: '/BannerPrincipal/almendra-mia-panque.png',
+    description: 'Panqué esponjoso a base de plátano maduro, sin ningún ingrediente de origen animal.',
+    calories: 180,
+    ingredients: ['Plátano', 'Harina de avena', 'Aceite de coco', 'Canela', 'Nuez'],
+    allergens: ['Frutos secos'],
   },
   {
     id: 3,
@@ -24,6 +32,10 @@ export const products: Product[] = [
     tag: 'Keto Friendly',
     color: 'bg-[#FF8A80]',
     image: '/BannerPrincipal/almendra-mia-donas.png',
+    description: 'Donas horneadas, no fritas, con cobertura de chocolate oscuro y toppings de nueces.',
+    calories: 150,
+    ingredients: ['Harina de almendra', 'Chocolate oscuro 70%', 'Eritritol', 'Nuez', 'Coco rallado'],
+    allergens: ['Frutos secos', 'Coco'],
   },
 ];
 

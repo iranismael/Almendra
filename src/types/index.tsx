@@ -5,6 +5,10 @@ export interface Product {
   tag: string;
   color: string;
   image: string;
+  description?: string;
+  calories?: number;
+  ingredients?: string[];
+  allergens?: string[];
 }
 
 export interface NavLink {

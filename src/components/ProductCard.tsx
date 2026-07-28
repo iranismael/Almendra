@@ -1,11 +1,15 @@
+'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import type { Product } from '@/types';
+import ProductModal from './ProductModal';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="bg-white rounded-[2rem] p-6 shadow-sm hover:shadow-xl transition-all group overflow-hidden border border-brand-almond/20">
       {/* Image container */}
@@ -31,10 +35,18 @@ export default function ProductCard({ product }: ProductCardProps) {
           <h3 className="text-xl font-bold text-brand-dark">{product.title}</h3>
           <p className="text-brand-sage font-bold">{product.price}</p>
         </div>
-        <button className="w-full mt-4 bg-brand-cream border border-brand-almond text-brand-dark py-3 rounded-xl font-bold hover:bg-brand-sage hover:text-white hover:border-brand-sage transition-all">
-          Ver detalles
+        <button
+            onClick={() => setIsModalOpen(true)}
+            className="w-full mt-4 bg-brand-cream border border-brand-almond text-brand-dark py-3 rounded-xl font-bold hover:bg-brand-sage hover:text-white hover:border-brand-sage transition-all"
+          >
+            Ver detalles
         </button>
       </div>
+      {isModalOpen && (
+        <ProductModal product={product} onClose={() => setIsModalOpen(false)} />
+      )}
     </div>
+
+    
   );
 }
